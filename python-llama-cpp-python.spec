@@ -21,6 +21,7 @@ Requires:	python%{pyver}dist(uvicorn)
 Requires:	python%{pyver}dist(fastapi)
 Requires:	python%{pyver}dist(sse-starlette)
 Requires:	python%{pyver}dist(starlette-context)
+Requires:	python%{pyver}dist(pydantic-settings)
 # To test the OpenAI API server:
 # python -m llama_cpp.server --model <model_path>
 
