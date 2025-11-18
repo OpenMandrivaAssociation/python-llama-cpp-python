@@ -12,9 +12,10 @@ Group:		Development/Python
 BuildSystem:	python
 BuildRequires:	python
 BuildRequires:	cmake
+BuildRequires:	python%{pyver}dist(scikit-build-core)
 BuildRequires:	pkgconfig(flexiblas)
 BuildRequires:	pkgconfig(vulkan)
-BuildRequires:	python%{pyver}dist(scikit-build-core)
+BuildRequires:	glslc
 # Required (at least) for the OpenAI API server
 Requires:	python%{pyver}dist(uvicorn)
 Requires:	python%{pyver}dist(fastapi)
