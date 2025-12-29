@@ -11,7 +11,7 @@ License:	MIT
 Group:		Development/Python
 BuildSystem:	python
 BuildRequires:	python
-BuildRequires:	cmake
+BuildRequires:	cmake ninja make
 BuildRequires:	python%{pyver}dist(scikit-build-core)
 BuildRequires:	pkgconfig(flexiblas)
 BuildRequires:	pkgconfig(vulkan)
