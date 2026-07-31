@@ -2,8 +2,8 @@
 %undefine _debugsource_packages
 
 Name:		python-llama-cpp-python
-Version:	0.3.16
-Release:	3
+Version:	0.3.34
+Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/l/llama_cpp_python/llama_cpp_python-%{version}.tar.gz
 Summary:	Python bindings for the llama.cpp library
 URL:		https://pypi.org/project/llama-cpp-python/
