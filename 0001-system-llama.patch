@@ -1,0 +1,23 @@
+From: OpenMandriva
+Subject: [PATCH] Allow building against system llama.cpp / ggml
+
+When LLAMA_BUILD=OFF, skip the vendored llama.cpp tree so the
+package can load libllama and libmtmd from the distro. scikit-build
+still needs a target.
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,6 +5,13 @@ project(llama_cpp)
+ option(LLAMA_BUILD "Build llama.cpp shared library and install alongside python package" ON)
+ option(LLAVA_BUILD "Build llava shared library and install alongside python package" ON)
+ 
++if (NOT LLAMA_BUILD)
++    # Distro package: ctypes loads /usr/lib64/libllama.so.0 via a
++    # symlink in llama_cpp/lib (see the spec). Do not compile vendor/.
++    add_custom_target(llama_cpp_python_system ALL)
++    return()
++endif()
++
+ function(llama_cpp_python_install_target target)
+     if(NOT TARGET ${target})
+         return()
