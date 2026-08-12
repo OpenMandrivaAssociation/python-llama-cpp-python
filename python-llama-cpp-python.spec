@@ -13,6 +13,7 @@ Group:		Development/Python
 BuildSystem:	python
 BuildRequires:	python
 BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	python%{pyver}dist(scikit-build-core)
 # ctypes loads the distro libllama / libmtmd (and through them system ggml).
 Requires:	llama-cpp%{?_isa}
