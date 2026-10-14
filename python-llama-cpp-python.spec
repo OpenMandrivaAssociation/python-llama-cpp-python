@@ -3,7 +3,7 @@
 
 Name:		python-llama-cpp-python
 Version:	0.3.34
-Release:	2
+Release:	3
 Source0:	https://files.pythonhosted.org/packages/source/l/llama_cpp_python/llama_cpp_python-%{version}.tar.gz
 Patch0:		0001-system-llama.patch
 Summary:	Python bindings for the llama.cpp library
@@ -39,8 +39,6 @@ Python bindings for llama.cpp. Inference uses the system llama-cpp
 package (libllama, libmtmd) and the system ggml backends
 (Vulkan / OpenCL / HIP plugins), not a private copy compiled into
 this wheel.
-
-0.3.34 is the current PyPI release.
 
 %prep
 %autosetup -p1 -n llama_cpp_python-%{version}
